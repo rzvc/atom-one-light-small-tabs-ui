@@ -87,8 +87,8 @@
     // Close icon ----------------------
 
     .close-icon {
-      top: .77em; // shoule be .75em but that messes up the pixel snapping
-      right: .77em;
+      top: .3em; // shoule be .75em but that messes up the pixel snapping
+      right: .5em;
       z-index: 2;
       font-size: 1em;
       width: 1.5em;
@@ -121,7 +121,7 @@
     }
     &:hover .close-icon {
       transform: scale(1);
-      transition-duration: .16s;
+      transition-duration: .03s;
     }
   }
 
@@ -168,6 +168,11 @@
 
   // Modified ----------------------
   .tab.modified {
+	&, &.active
+	{
+		color: #c00 !important;
+	}
+
     &:hover .close-icon {
       color: @accent-text-color;
       &:hover {
@@ -175,12 +180,12 @@
       }
     }
     &:not(:hover) .close-icon {
-      top: .75em;
-      right: .75em;
+      top: .3em;
+      right: .5em;
       width: 1.5em;
       height: 1.5em;
       line-height: 1.5;
-      color: @accent-text-color;
+      color: #c00;
       border: none;
       transform: scale(1);
       &::before {
@@ -246,7 +251,7 @@
   border-radius: @component-border-radius 0;
   background: @accent-color;
   opacity: 0;
-  transition: opacity .16s;
+  transition: opacity .08s;
 
   .theme-one-light-ui & {
     left: 0;
@@ -255,7 +260,7 @@
 
 atom-pane.active .tab.active:before {
   opacity: 1;
-  transition-duration: .32s;
+  //transition-duration: .03s;
 }
 
 
